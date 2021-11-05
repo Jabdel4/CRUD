@@ -1,0 +1,68 @@
+<div class="container">
+  <br />
+  <div class="row">
+    <div class="col">
+      <h3>Créer un client</h3>
+    </div>
+    <div class="col text-right">
+      <a href="#" routerLink="/clients/list" class="btn btn-secondary btn-sm">Retourner à la liste des clients</a>
+    </div>
+  </div>
+  <br />
+  <form [formGroup]="createForm" (ngSubmit)="onSubmit(createForm)">
+
+    <div class="form-group">
+      <label for="Noms">Noms:</label>
+      <input formControlName="Noms"
+             id="Noms"
+             type="text"
+             class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="Prenoms">Prenoms:</label>
+      <input formControlName="Prenoms"
+             id="Prenoms"
+             type="text"
+             class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="Sexe">Sexe:</label>
+      <select formControlName="Sexe"
+              id="Sexe"
+              class="form-control">
+        <option value="">- Select -</option>
+        <option value="M">Masculin</option>
+        <option value="F">Féminin</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="Adresse">Adresse:</label>
+      <input formControlName="Adresse"
+             id="Adresse"
+             type="text"
+             class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="Description">Description:</label>
+      <input formControlName="Description"
+             id="Description"
+             type="text"
+             class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="DateEnrollement">Description:</label>
+      <input formControlName="DateEnrollement"
+             id="DateEnrollement"
+             type="datetime-local"
+             class="form-control"
+             [(ngModel)]="filterDateFrom"/>
+    </div>
+
+    <button class="btn btn-primary" type="submit" [disabled]="!createForm.valid">Créer</button>
+  </form>
+</div>

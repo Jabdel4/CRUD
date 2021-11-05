@@ -1,0 +1,26 @@
+<div class="container">
+  <br/>
+  <h3>Détails client</h3>
+  <br/>
+  <div class="card">
+    <div class="card-header">
+      <div class="row">
+        <div class="col">
+          <h4>{{ client.Noms }}</h4>
+        </div>
+        <div class="col text-right">
+          <a href="#" routerLink="/clients/list" class="btn btn-secondary btn-sm">Retour à la liste des clients</a>
+        </div>
+      </div>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><b>Id:</b> {{ client.Id }}</li>
+      <li class="list-group-item"><b>Noms:</b> {{ client.Noms }}</li>
+      <li class="list-group-item"><b>Prenoms:</b> {{ client.Prenoms }}</li>
+      <li class="list-group-item"><b>Sexe:</b> {{ client.Sexe }}</li>
+      <li class="list-group-item"><b>Adresse:</b> {{ client.Adresse }}</li>
+      <li class="list-group-item"><b>Description:</b> {{ client.Description }}</li>
+      <li class="list-group-item"><b>Date inscription:</b> {{ client.DateEnrollement }}</li>
+    </ul>
+  </div>
+</div>
