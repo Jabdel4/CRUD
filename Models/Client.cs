@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace CRUD.Models
 {
+    //Colonnes de la table Client dans la base de données SQL Server
     public class Client
     {
         [Key]
